@@ -21,5 +21,39 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "add_to_cart": MessageLookupByLibrary.simpleMessage("Add to Cart"),
+    "app_name": MessageLookupByLibrary.simpleMessage("Dushka Burger"),
+    "apply": MessageLookupByLibrary.simpleMessage("Apply"),
+    "back": MessageLookupByLibrary.simpleMessage("Back"),
+    "cart": MessageLookupByLibrary.simpleMessage("Shopping Cart"),
+    "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+    "coupon_hint": MessageLookupByLibrary.simpleMessage("Enter coupon code"),
+    "egp": MessageLookupByLibrary.simpleMessage("EGP"),
+    "empty_cart": MessageLookupByLibrary.simpleMessage("Your cart is empty"),
+    "error_occurred": MessageLookupByLibrary.simpleMessage("An error occurred"),
+    "extras": MessageLookupByLibrary.simpleMessage("Extras"),
+    "grand_total": MessageLookupByLibrary.simpleMessage("Grand Total"),
+    "item_added": MessageLookupByLibrary.simpleMessage("Item added to cart"),
+    "item_removed": MessageLookupByLibrary.simpleMessage(
+      "Item removed from cart",
+    ),
+    "loading": MessageLookupByLibrary.simpleMessage("Loading..."),
+    "no_products": MessageLookupByLibrary.simpleMessage(
+      "No products available",
+    ),
+    "optional": MessageLookupByLibrary.simpleMessage("Optional"),
+    "price": MessageLookupByLibrary.simpleMessage("Price"),
+    "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
+      "Proceed to Checkout",
+    ),
+    "product_details": MessageLookupByLibrary.simpleMessage("Product Details"),
+    "quantity": MessageLookupByLibrary.simpleMessage("Quantity"),
+    "remove": MessageLookupByLibrary.simpleMessage("Remove"),
+    "required": MessageLookupByLibrary.simpleMessage("Required"),
+    "retry": MessageLookupByLibrary.simpleMessage("Retry"),
+    "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
+    "tax": MessageLookupByLibrary.simpleMessage("Tax"),
+    "total": MessageLookupByLibrary.simpleMessage("Total"),
+  };
 }

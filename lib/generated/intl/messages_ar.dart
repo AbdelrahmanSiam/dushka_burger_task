@@ -21,5 +21,39 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
-  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "add_to_cart": MessageLookupByLibrary.simpleMessage("أضف إلى السلة"),
+    "app_name": MessageLookupByLibrary.simpleMessage("دوشكا برجر"),
+    "apply": MessageLookupByLibrary.simpleMessage("تطبيق"),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
+    "cart": MessageLookupByLibrary.simpleMessage("عربة التسوق"),
+    "categories": MessageLookupByLibrary.simpleMessage("القائمة"),
+    "coupon_hint": MessageLookupByLibrary.simpleMessage("ادخل الكوبون هنا"),
+    "egp": MessageLookupByLibrary.simpleMessage("ج.م"),
+    "empty_cart": MessageLookupByLibrary.simpleMessage("سلتك فارغة"),
+    "error_occurred": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+    "extras": MessageLookupByLibrary.simpleMessage("الإضافات"),
+    "grand_total": MessageLookupByLibrary.simpleMessage("المبلغ الإجمالي"),
+    "item_added": MessageLookupByLibrary.simpleMessage(
+      "تمت إضافة المنتج للسلة",
+    ),
+    "item_removed": MessageLookupByLibrary.simpleMessage(
+      "تم حذف المنتج من السلة",
+    ),
+    "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل..."),
+    "no_products": MessageLookupByLibrary.simpleMessage("لا توجد منتجات متاحة"),
+    "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+    "price": MessageLookupByLibrary.simpleMessage("السعر"),
+    "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
+      "المتابعة للدفع",
+    ),
+    "product_details": MessageLookupByLibrary.simpleMessage("تفاصيل المنتج"),
+    "quantity": MessageLookupByLibrary.simpleMessage("الكمية"),
+    "remove": MessageLookupByLibrary.simpleMessage("حذف"),
+    "required": MessageLookupByLibrary.simpleMessage("مطلوب"),
+    "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+    "subtotal": MessageLookupByLibrary.simpleMessage("السعر الإجمالي"),
+    "tax": MessageLookupByLibrary.simpleMessage("الضريبة"),
+    "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
+  };
 }

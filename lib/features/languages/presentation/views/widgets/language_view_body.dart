@@ -8,7 +8,19 @@ class LanguageViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [Image.asset(AppAssets.logo)],
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(AppAssets.logo, height: 250, width: 250),
+        Text(
+          " 👋 !مرحبا",
+          style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+        ),
+        SizedBox(height: 8),
+        Text(
+          " .اختر اللغه المناسبه لك ",
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        ),
+      ],
     );
   }
 }

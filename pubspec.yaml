@@ -32,6 +32,8 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^17.1.0
+  flutter_localizations:
+     sdk: flutter
 
 dev_dependencies:
 
@@ -80,3 +82,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_intl:
+  enabled: true

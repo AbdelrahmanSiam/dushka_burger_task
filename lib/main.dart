@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/features/languages/presentation/views/language_view.dart';
 import 'package:flutter/material.dart';
 
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRouter.router,
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFFFAF3E9),
       ),
       debugShowCheckedModeBanner: false,
-      home: LanguageView(),
     );
   }
 }

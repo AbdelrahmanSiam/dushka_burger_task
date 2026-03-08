@@ -1,4 +1,5 @@
 import 'package:dusks_burger_task/core/app_assets.dart';
+import 'package:dusks_burger_task/features/languages/presentation/views/widgets/draggable_scrollable_sheet_widget.dart';
 import 'package:flutter/material.dart';
 
 class LanguageViewBody extends StatelessWidget {
@@ -6,20 +7,28 @@ class LanguageViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
+    return Stack(
       children: [
-        Image.asset(AppAssets.logo, height: 250, width: 250),
-        Text(
-          " 👋 !مرحبا",
-          style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+        Align(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Spacer(),
+              Image.asset(AppAssets.logo, height: 250, width: 250),
+              const Text(
+                " 👋 !مرحبا",
+                style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              const Text(
+                ".اختر اللغه المناسبه لك",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              Spacer(flex: 2,),
+            ],
+          ),
         ),
-        SizedBox(height: 8),
-        Text(
-          " .اختر اللغه المناسبه لك ",
-          style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-        ),
+        DraggableScrollableSheetWidget(),
       ],
     );
   }

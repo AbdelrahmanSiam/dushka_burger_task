@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/features/languages/presentation/views/widgets/custom_language_button.dart';
 import 'package:flutter/material.dart';
 
 class DraggableScrollableSheetWidget extends StatelessWidget {
@@ -6,9 +7,9 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.25,
-      minChildSize: 0.25,
-      maxChildSize: 0.25,
+      initialChildSize: 0.18,
+      minChildSize: 0.18,
+      maxChildSize: 0.2,
       builder: (context, scrollController) {
         return Container(
           decoration: const BoxDecoration(
@@ -16,18 +17,19 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
             borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
             boxShadow: [BoxShadow(blurRadius: 15, color: Colors.black26)],
           ),
-          child: ListView(
-            controller: scrollController,
-            children: const [
+          child: Column(
+            children: [
               Center(
                 child: SizedBox(
                   width: 55,
                   child: Divider(thickness: 4, color: Colors.grey),
                 ),
               ),
-              SizedBox(height: 10),
-              ListTile(title: Text("English")),
-              ListTile(title: Text("العربيه")),
+              Spacer(),
+              CustomLanguageButton(language: "English"),
+              Spacer(),
+              CustomLanguageButton(language: "العربية"),
+              Spacer(),
             ],
           ),
         );

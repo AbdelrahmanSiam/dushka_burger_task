@@ -13,7 +13,7 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
     return DraggableScrollableSheet(
       initialChildSize: 0.18,
       minChildSize: 0.18,
-      maxChildSize: 0.2,
+      maxChildSize: 0.35,
       builder: (context, scrollController) {
         return Container(
           decoration: const BoxDecoration(

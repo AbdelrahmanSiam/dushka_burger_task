@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class LanguageViewBody extends StatelessWidget {
   const LanguageViewBody({super.key});
-
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Stack(
       children: [
         Align(
@@ -14,7 +14,7 @@ class LanguageViewBody extends StatelessWidget {
           child: Column(
             children: [
               Spacer(),
-              Image.asset(AppAssets.logo, height: 250, width: 250),
+              Image.asset(AppAssets.logo, height: height * 0.25),
               const Text(
                 " 👋 !مرحبا",
                 style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
@@ -24,7 +24,7 @@ class LanguageViewBody extends StatelessWidget {
                 ".اختر اللغه المناسبه لك",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
-              Spacer(flex: 2,),
+              Spacer(flex: 2),
             ],
           ),
         ),

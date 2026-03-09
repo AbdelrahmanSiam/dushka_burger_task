@@ -9,7 +9,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   await Hive.initFlutter();
-  setupLocator();
+  await setupLocator();
   runApp(
     BlocProvider(
       create: (context) => getIt<LanguageCubit>(),

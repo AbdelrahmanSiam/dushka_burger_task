@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/core/di/injection.dart';
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/features/languages/presentation/manager/language_cubit/language_cubit.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
@@ -6,11 +7,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-void main()async {
+void main() async {
   await Hive.initFlutter();
-  final box = await Hive.openBox<String>("settings");
+  setupLocator();
   runApp(
-    BlocProvider(create: (context) => LanguageCubit(), child: const MyApp()),
+    BlocProvider(
+      create: (context) => getIt<LanguageCubit>(),
+      child: const MyApp(),
+    ),
   );
 }
 

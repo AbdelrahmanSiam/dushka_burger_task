@@ -16,18 +16,22 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      locale: Locale("ar"),
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      routerConfig: AppRouter.router,
-      theme: ThemeData(scaffoldBackgroundColor: Color(0xFFFAF3E9)),
-      debugShowCheckedModeBanner: false,
+    return BlocBuilder<LanguageCubit, Locale>(
+      builder: (context, state) {
+        return MaterialApp.router(
+          locale: state,
+          localizationsDelegates: [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: S.delegate.supportedLocales,
+          routerConfig: AppRouter.router,
+          theme: ThemeData(scaffoldBackgroundColor: Color(0xFFFAF3E9)),
+          debugShowCheckedModeBanner: false,
+        );
+      },
     );
   }
 }

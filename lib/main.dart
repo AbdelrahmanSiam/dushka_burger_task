@@ -4,8 +4,11 @@ import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main()async {
+  await Hive.initFlutter();
+  final box = await Hive.openBox<String>("settings");
   runApp(
     BlocProvider(create: (context) => LanguageCubit(), child: const MyApp()),
   );

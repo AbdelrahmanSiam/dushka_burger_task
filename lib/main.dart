@@ -1,11 +1,14 @@
 import 'package:dusks_burger_task/core/utils/app_router.dart';
-import 'package:dusks_burger_task/features/languages/presentation/views/language_view.dart';
+import 'package:dusks_burger_task/features/languages/presentation/manager/language_cubit/language_cubit.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(create: (context) => LanguageCubit(), child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {

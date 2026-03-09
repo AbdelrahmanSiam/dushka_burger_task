@@ -1,5 +1,6 @@
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/features/languages/presentation/manager/language_cubit/language_cubit.dart';
+import 'package:dusks_burger_task/features/languages/presentation/views/helper.dart';
 import 'package:dusks_burger_task/features/languages/presentation/views/widgets/custom_language_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -30,24 +31,20 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              InkWell(
+              CustomLanguageButton(
+                language: "English",
                 onTap: () {
                   context.read<LanguageCubit>().changeLanguage('en');
-                  GoRouter.of(
-                    context,
-                  ).pushReplacement(AppRouter.categoriesView);
+                  goToHome(context);
                 },
-                child: CustomLanguageButton(language: "English"),
               ),
               Spacer(),
-              InkWell(
+              CustomLanguageButton(
+                language: "العربية",
                 onTap: () {
                   context.read<LanguageCubit>().changeLanguage('ar');
-                  GoRouter.of(
-                    context,
-                  ).pushReplacement(AppRouter.categoriesView);
+                  goToHome(context);
                 },
-                child: CustomLanguageButton(language: "العربية"),
               ),
               Spacer(),
             ],

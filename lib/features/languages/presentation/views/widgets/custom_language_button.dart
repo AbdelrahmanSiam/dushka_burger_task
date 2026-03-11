@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CustomLanguageButton extends StatelessWidget {
@@ -9,8 +10,8 @@ class CustomLanguageButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 12),
-        padding: const EdgeInsets.all(10.0),
+        margin:  EdgeInsets.symmetric(horizontal: Responsive.getWidth(context, 12)),
+        padding: EdgeInsets.all(Responsive.getWidth(context, 18)),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),

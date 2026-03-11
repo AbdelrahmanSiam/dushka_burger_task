@@ -35,8 +35,8 @@ class CategoriesTabBar extends StatelessWidget {
                 Text(
                   title,
                   style: isSelected
-                      ? AppStyles.textStyle13.copyWith(color: Colors.white)
-                      : AppStyles.textStyle13,
+                      ? AppStyles.textStyle13(context).copyWith(color: Colors.white)
+                      : AppStyles.textStyle13(context),
                 ),
               ],
             ),

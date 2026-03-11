@@ -16,14 +16,20 @@ class LanguageViewBody extends StatelessWidget {
             children: [
               Spacer(),
               Image.asset(AppAssets.logo, height: height * 0.25),
-               Text(
+              Text(
                 " مرحبا 👋 !",
-                style: TextStyle(fontSize:Responsive.getFont(context, 42), fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: Responsive.getFont(context, 42),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 8),
-               Text(
+              Text(
                 "اختر اللغه المناسبه لك.",
-                style: TextStyle(fontSize: Responsive.getFont(context, 18), fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  fontSize: Responsive.getFont(context, 18),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Spacer(flex: 2),
             ],

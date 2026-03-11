@@ -1,16 +1,15 @@
+import 'package:dusks_burger_task/core/utils/responsive.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
-  static TextStyle textStyle13 = TextStyle(
-    fontSize: getResponsiveFontSize(fontSize: 13),
-    fontWeight: FontWeight.bold,
+
+  static TextStyle textStyle13(BuildContext context){
+    return TextStyle(
     color: Colors.red,
+    fontSize: Responsive.getFont(context, 13),
+    fontWeight: FontWeight.bold,
   );
+  }
 }
 
 
-double getResponsiveFontSize({required double fontSize}) {
-  double lowerLimit = fontSize * .8;
-  double upperLimit = fontSize * 1.2;
-  return fontSize.clamp(lowerLimit, upperLimit);
-}

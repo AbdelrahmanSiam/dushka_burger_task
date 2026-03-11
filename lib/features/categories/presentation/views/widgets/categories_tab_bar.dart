@@ -27,15 +27,14 @@ class CategoriesTabBar extends StatelessWidget {
           child: Center(
             child: Row(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadiusGeometry.circular(1000),
-                  child: Image.asset(image, width: 35, height: 35),
-                ),
+                CircleAvatar(radius: 18, backgroundImage: AssetImage(image)),
                 SizedBox(width: 5),
                 Text(
                   title,
                   style: isSelected
-                      ? AppStyles.textStyle13(context).copyWith(color: Colors.white)
+                      ? AppStyles.textStyle13(
+                          context,
+                        ).copyWith(color: Colors.white)
                       : AppStyles.textStyle13(context),
                 ),
               ],

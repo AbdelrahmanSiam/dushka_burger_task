@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesViewBody extends StatelessWidget {
@@ -7,8 +8,24 @@ class CategoriesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        
+        Expanded(
+          flex: 1,
+          child: CategoriesTabBar(),
+        ),
+        Expanded(
+          flex: 16,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text("data"),
+                subtitle: Text("data"),
+                trailing: Icon(Icons.add),
+              );
+            },
+          ),
+        ),
       ],
     );
   }
 }
+

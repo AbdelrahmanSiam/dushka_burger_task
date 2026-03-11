@@ -13,13 +13,11 @@ class LanguageCubit extends Cubit<Locale> {
 
   void changeLanguage(String code) async {
     await changeLanguageUseCase(code);
-
     emit(Locale(code));
   }
 
   void loadSavedLanguage() {
     final code = getSavedLanguageUseCase();
-
     emit(Locale(code));
   }
 }

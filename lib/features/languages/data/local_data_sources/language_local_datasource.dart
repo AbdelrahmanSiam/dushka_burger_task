@@ -11,6 +11,6 @@ class LanguageLocalDataSource {
   }
 
   String getSavedLanguage() {
-    return box.get("language", defaultValue: "en");
+    return box.get("language", defaultValue: "ar");
   }
 }

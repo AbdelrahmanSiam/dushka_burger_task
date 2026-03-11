@@ -3,7 +3,7 @@ import 'package:dusks_burger_task/features/languages/domain/repo/language_repo.d
 class ChangeLanguageUsecase {
   final LanguageRepo languageRepo;
 
-  ChangeLanguageUsecase({required this.languageRepo});
+  ChangeLanguageUsecase(this.languageRepo);
   Future<void> call (String code){
   return languageRepo.saveLanguage(code);
   }

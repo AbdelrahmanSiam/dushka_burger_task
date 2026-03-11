@@ -14,7 +14,7 @@ class CustomLanguageButton extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          border: BoxBorder.all(color: Colors.red, width: 1.2),
+          border: Border.all(color: Colors.red, width: 1.2),
         ),
         child: Text(
           language,

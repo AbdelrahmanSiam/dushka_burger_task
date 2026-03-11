@@ -12,12 +12,12 @@ final getIt = GetIt.instance;
 Future<void> setupLocator() async {
   final box = await Hive.openBox('settings');
 
-  getIt.registerLazySingleton<LanguageLocalDataSource>(
-    () => LanguageLocalDataSource(box),
+  getIt.registerLazySingleton<LanguageLocalDataSourceImpl>(
+    () => LanguageLocalDataSourceImpl(box),
   );
 
   getIt.registerLazySingleton<LanguageRepo>(
-    () => LanguageRepoImpl(languageLocalDataSource: getIt()),
+    () => LanguageRepoImpl(languageLocalDataSourceImpl: getIt()),
   );
 
   getIt.registerLazySingleton(() => ChangeLanguageUsecase(getIt()));

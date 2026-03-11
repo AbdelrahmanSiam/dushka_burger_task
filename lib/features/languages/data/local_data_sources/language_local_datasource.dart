@@ -1,10 +1,16 @@
 import 'package:hive/hive.dart';
 
-class LanguageLocalDataSource {
+abstract class LanguageLocalDatasource {
+  Future<void> saveLanguage(String code);
+  String getSavedLanguage();
+}
+
+
+class LanguageLocalDataSourceImpl implements LanguageLocalDatasource {
 
   final Box box;
 
-  LanguageLocalDataSource(this.box);
+  LanguageLocalDataSourceImpl(this.box);
 
   Future<void> saveLanguage(String code) async {
     await box.put("language", code);

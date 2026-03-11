@@ -3,5 +3,5 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 void goToHome(BuildContext context) {
-  GoRouter.of(context).pushReplacement(AppRouter.categoriesView);
+  (context).go(AppRouter.categoriesView);
 }

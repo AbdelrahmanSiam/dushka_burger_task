@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,11 @@ class CategoriesViewBody extends StatelessWidget {
       children: [
         Expanded(
           flex: 1,
-          child: CategoriesTabBar(),
+          child: CategoriesTabBar(
+            isSelected: true ,
+            image: AppAssets.logo,
+            title: "عروض دوشكا برجر"
+          ),
         ),
         Expanded(
           flex: 16,

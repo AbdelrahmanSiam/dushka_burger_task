@@ -1,10 +1,9 @@
-import 'package:dusks_burger_task/core/utils/app_router.dart';
+import 'package:dusks_burger_task/core/utils/responsive.dart';
 import 'package:dusks_burger_task/features/languages/presentation/manager/language_cubit/language_cubit.dart';
 import 'package:dusks_burger_task/features/languages/presentation/views/helper.dart';
 import 'package:dusks_burger_task/features/languages/presentation/views/widgets/custom_language_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class DraggableScrollableSheetWidget extends StatelessWidget {
   const DraggableScrollableSheetWidget({super.key});
@@ -26,7 +25,7 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
             children: [
               Center(
                 child: SizedBox(
-                  width: 55,
+                  width: Responsive.getWidth(context, 55),
                   child: Divider(thickness: 4, color: Colors.grey),
                 ),
               ),

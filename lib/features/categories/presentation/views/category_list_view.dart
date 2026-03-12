@@ -1,13 +1,13 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/models/category_model.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListView extends StatelessWidget {
   const CategoryListView({
-    super.key, required this.categoryModel,
+    super.key, required this.productModel,
   });
- final CategoryModel categoryModel;
+ final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,14 +15,14 @@ class CategoryListView extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(right: 8.0),
-          child: Text(categoryModel.categoryHeader , style: AppStyles.textStyleBold18(context),),
+          child: Text(productModel.productHeader , style: AppStyles.textStyleBold18(context),),
         ),
         Expanded(
           child: ListView.builder(
             itemCount: 15,
             itemBuilder: (context, index) {
               return CategoryListTile(
-                categoryModel : categoryModel
+                productModel : productModel
               );
             },
           ),

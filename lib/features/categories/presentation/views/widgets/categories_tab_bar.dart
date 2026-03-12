@@ -1,19 +1,16 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/models/category_tab_bar_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesTabBar extends StatelessWidget {
   const CategoriesTabBar({
-    super.key,
-    required this.isSelected,
-    required this.image,
-    required this.title,
+    super.key, required this.categoryTabBarModel,
   });
-  final bool isSelected;
-  final String image;
-  final String title;
+  final CategoryTabBarModel categoryTabBarModel;
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
       scrollDirection: Axis.horizontal,
       itemCount: 5,
       itemBuilder: (context, index) {
@@ -21,17 +18,17 @@ class CategoriesTabBar extends StatelessWidget {
           margin: EdgeInsets.all(6),
           padding: EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: isSelected ? Colors.red : Color(0XFFF5E1DC),
+            color: categoryTabBarModel.isSelected ? Colors.red : Color(0XFFF5E1DC),
             borderRadius: BorderRadius.circular(22),
           ),
           child: Center(
             child: Row(
               children: [
-                CircleAvatar(radius: 18, backgroundImage: AssetImage(image)),
+                CircleAvatar(radius: 18, backgroundImage: AssetImage(categoryTabBarModel.categoryTabBarImage)),
                 SizedBox(width: 5),
                 Text(
-                  title,
-                  style: isSelected
+                  categoryTabBarModel.categoryTabBarName,
+                  style: categoryTabBarModel.isSelected
                       ? AppStyles.textStyleBold13(
                           context,
                         ).copyWith(color: Colors.white)

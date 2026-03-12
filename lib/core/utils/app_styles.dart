@@ -16,10 +16,10 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
   );
   }
-  static TextStyle textStyleMedium13(BuildContext context){
+  static TextStyle textStyleBold18(BuildContext context){
     return TextStyle(
-    fontSize: Responsive.getFont(context, 13),
-    fontWeight: FontWeight.w500,
+    fontSize: Responsive.getFont(context, 18),
+    fontWeight: FontWeight.bold,
   );
   }
 }

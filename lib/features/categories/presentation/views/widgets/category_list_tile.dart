@@ -1,28 +1,27 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/models/category_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListTile extends StatelessWidget {
   const CategoryListTile({
-    super.key,
-    required this.image,
-    required this.title,
-    required this.subTitle,
+    super.key, required this.categoryModel,
   });
-  final String image, title, subTitle;
-  @override
+  final CategoryModel categoryModel;
   Widget build(BuildContext context) {
     return ListTile(
       leading: ClipRRect(
-        borderRadius: BorderRadiusGeometry.circular(35),
-        child: Image.asset(image),
+        borderRadius: BorderRadius.circular(18),
+        child: Image.asset(categoryModel.categoryImage, width: 55, height: 55, fit: BoxFit.cover),
       ),
-      title: Text(title, style: AppStyles.textStyleSemiBold15(context)),
-      subtitle: Text(subTitle, style: AppStyles.textStyleMedium13(context)),
+      title: Text(categoryModel.categoryName, style: AppStyles.textStyleSemiBold15(context)),
+      subtitle: Text(categoryModel.categoryPrice, style: AppStyles.textStyleBold18(context)),
       trailing: Container(
+        width: 30,
+        height: 30,
         decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
         child: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.add, color: Colors.white),
+          icon: Icon(Icons.add, color: Colors.white, size: 15),
         ),
       ),
     );

@@ -2,7 +2,7 @@ import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/category_list_view.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/category_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/category_tab_bar_model.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar_list_view.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesViewBody extends StatelessWidget {
@@ -12,9 +12,9 @@ class CategoriesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(
-          flex: 1,
-          child: CategoriesTabBar(
+        SizedBox(
+          height: 50,
+          child: CategoriesTabBarListView(
             categoryTabBarModel: CategoryTabBarModel(
               categoryTabBarName: "عروض دوشكا برجر",
               categoryTabBarImage: AppAssets.logo,
@@ -23,7 +23,6 @@ class CategoriesViewBody extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 16,
           child: CategoryListView(
             categoryModel: CategoryModel(
               categoryHeader: "عروض دوشكا برجر",

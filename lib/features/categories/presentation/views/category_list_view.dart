@@ -1,5 +1,4 @@
-
-import 'package:dusks_burger_task/core/utils/app_assets.dart';
+import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/category_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_tile.dart';
 import 'package:flutter/material.dart';
@@ -14,10 +13,12 @@ class CategoryListView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(categoryModel.categoryHeader),
+        Padding(
+          padding: const EdgeInsets.only(right: 8.0),
+          child: Text(categoryModel.categoryHeader , style: AppStyles.textStyleBold18(context),),
+        ),
         Expanded(
           child: ListView.builder(
-            physics: const BouncingScrollPhysics(),
             itemCount: 15,
             itemBuilder: (context, index) {
               return CategoryListTile(

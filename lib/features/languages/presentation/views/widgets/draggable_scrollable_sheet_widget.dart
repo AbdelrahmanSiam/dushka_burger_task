@@ -11,8 +11,8 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.18,
-      minChildSize: 0.18,
+      initialChildSize: 0.25,
+      minChildSize: 0.25,
       maxChildSize: 0.35,
       builder: (context, scrollController) {
         return Container(
@@ -25,7 +25,7 @@ class DraggableScrollableSheetWidget extends StatelessWidget {
             children: [
               Center(
                 child: SizedBox(
-                  width: Responsive.getWidth(context, 55),
+                  width: 55,
                   child: Divider(thickness: 4, color: Colors.grey),
                 ),
               ),

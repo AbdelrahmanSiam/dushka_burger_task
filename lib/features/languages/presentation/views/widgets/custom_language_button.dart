@@ -10,8 +10,8 @@ class CustomLanguageButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        margin:  EdgeInsets.symmetric(horizontal: Responsive.getWidth(context, 12)),
-        padding: EdgeInsets.all(Responsive.getWidth(context, 18)),
+        margin:  EdgeInsets.symmetric(horizontal: 12),
+        padding: EdgeInsets.all(18),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),

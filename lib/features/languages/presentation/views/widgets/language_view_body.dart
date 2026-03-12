@@ -19,7 +19,7 @@ class LanguageViewBody extends StatelessWidget {
               Text(
                 " مرحبا 👋 !",
                 style: TextStyle(
-                  fontSize: Responsive.getFont(context, 42),
+                  fontSize: 42,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -27,7 +27,7 @@ class LanguageViewBody extends StatelessWidget {
               Text(
                 "اختر اللغه المناسبه لك.",
                 style: TextStyle(
-                  fontSize: Responsive.getFont(context, 18),
+                  fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),

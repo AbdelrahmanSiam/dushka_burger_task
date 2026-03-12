@@ -1,5 +1,6 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesViewBody extends StatelessWidget {
@@ -12,19 +13,19 @@ class CategoriesViewBody extends StatelessWidget {
         Expanded(
           flex: 1,
           child: CategoriesTabBar(
-            isSelected: true ,
+            isSelected: true,
             image: AppAssets.logo,
-            title: "عروض دوشكا برجر"
+            title: "عروض دوشكا برجر",
           ),
         ),
         Expanded(
           flex: 16,
           child: ListView.builder(
             itemBuilder: (context, index) {
-              return ListTile(
-                title: Text("data"),
-                subtitle: Text("data"),
-                trailing: Icon(Icons.add),
+              return CategoryListTile(
+                image: AppAssets.burger,
+                title: "بيج بايت بوكس",
+                subTitle: "24.4",
               );
             },
           ),
@@ -33,4 +34,3 @@ class CategoriesViewBody extends StatelessWidget {
     );
   }
 }
-

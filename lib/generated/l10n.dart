@@ -228,6 +228,26 @@ class S {
   String get optional {
     return Intl.message('Optional', name: 'optional', desc: '', args: []);
   }
+
+  /// `Account`
+  String get person {
+    return Intl.message('Account', name: 'person', desc: '', args: []);
+  }
+
+  /// `Home`
+  String get home {
+    return Intl.message('Home', name: 'home', desc: '', args: []);
+  }
+
+  /// `Menu`
+  String get menu {
+    return Intl.message('Menu', name: 'menu', desc: '', args: []);
+  }
+
+  /// `Offer`
+  String get offer {
+    return Intl.message('Offer', name: 'offer', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

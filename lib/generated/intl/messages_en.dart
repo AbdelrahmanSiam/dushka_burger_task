@@ -34,15 +34,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_occurred": MessageLookupByLibrary.simpleMessage("An error occurred"),
     "extras": MessageLookupByLibrary.simpleMessage("Extras"),
     "grand_total": MessageLookupByLibrary.simpleMessage("Grand Total"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "item_added": MessageLookupByLibrary.simpleMessage("Item added to cart"),
     "item_removed": MessageLookupByLibrary.simpleMessage(
       "Item removed from cart",
     ),
     "loading": MessageLookupByLibrary.simpleMessage("Loading..."),
+    "menu": MessageLookupByLibrary.simpleMessage("Menu"),
     "no_products": MessageLookupByLibrary.simpleMessage(
       "No products available",
     ),
+    "offer": MessageLookupByLibrary.simpleMessage("Offer"),
     "optional": MessageLookupByLibrary.simpleMessage("Optional"),
+    "person": MessageLookupByLibrary.simpleMessage("Account"),
     "price": MessageLookupByLibrary.simpleMessage("Price"),
     "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
       "Proceed to Checkout",

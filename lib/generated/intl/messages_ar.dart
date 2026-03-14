@@ -34,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "error_occurred": MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
     "extras": MessageLookupByLibrary.simpleMessage("الإضافات"),
     "grand_total": MessageLookupByLibrary.simpleMessage("المبلغ الإجمالي"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "item_added": MessageLookupByLibrary.simpleMessage(
       "تمت إضافة المنتج للسلة",
     ),
@@ -41,8 +42,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "تم حذف المنتج من السلة",
     ),
     "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل..."),
+    "menu": MessageLookupByLibrary.simpleMessage("القائمة"),
     "no_products": MessageLookupByLibrary.simpleMessage("لا توجد منتجات متاحة"),
+    "offer": MessageLookupByLibrary.simpleMessage("العروض"),
     "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+    "person": MessageLookupByLibrary.simpleMessage("الحساب"),
     "price": MessageLookupByLibrary.simpleMessage("السعر"),
     "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
       "المتابعة للدفع",

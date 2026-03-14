@@ -25,5 +25,9 @@
   "no_products": "No products available",
   "price": "Price",
   "required": "Required",
-  "optional": "Optional"
+  "optional": "Optional",
+  "person": "Account",
+  "home": "Home",
+  "menu": "Menu",
+  "offer": "Offer"
 }

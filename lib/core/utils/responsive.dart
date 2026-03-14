@@ -19,6 +19,7 @@ class Responsive {
     return (fontSize / designWidth) * screenWidth;
   }
 }
+
 /*
 Example:
 Button width = 200 , design width = 375 , user width = 430

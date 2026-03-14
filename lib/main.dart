@@ -1,4 +1,5 @@
 import 'package:dusks_burger_task/core/di/injection.dart';
+import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/features/languages/presentation/manager/language_cubit/language_cubit.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           routerConfig: AppRouter.router,
-          theme: ThemeData(scaffoldBackgroundColor: Color(0xFFFAF3E9)),
+          theme: ThemeData(scaffoldBackgroundColor: AppColors.backgroundColors),
           debugShowCheckedModeBanner: false,
         );
       },

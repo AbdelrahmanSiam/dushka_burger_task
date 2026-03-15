@@ -9,7 +9,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.08,
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 12),
       decoration: BoxDecoration(
         color: AppColors.backgroundColor,
         boxShadow: [

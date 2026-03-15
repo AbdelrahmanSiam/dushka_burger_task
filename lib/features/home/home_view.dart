@@ -14,23 +14,25 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  int currentIndex = 0 ;
+  int currentIndex = 0;
   final pages = [
     HomeViewBody(),
     CategoriesViewBody(),
     OfferViewBody(),
     AccountViewBody(),
   ];
-  void onTap(int index){
-    if(index == 2){
+  void onTap(int index) {
+    if (index == 2) {
       GoRouter.of(context).push(AppRouter.cartView);
       return;
     }
+    setState(() {
+      currentIndex = index > 2 ? index - 1 : index;
+    });
   }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-    );
+    return Scaffold();
   }
 }

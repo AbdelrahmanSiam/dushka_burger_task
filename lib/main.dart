@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
           ],
           supportedLocales: S.delegate.supportedLocales,
           routerConfig: AppRouter.router,
-          theme: ThemeData(scaffoldBackgroundColor: AppColors.backgroundColors),
+          theme: ThemeData(scaffoldBackgroundColor: AppColors.backgroundColor),
           debugShowCheckedModeBanner: false,
         );
       },

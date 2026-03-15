@@ -1,4 +1,6 @@
+import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
+
 class NavigationItem extends StatelessWidget {
   const NavigationItem({
     super.key,
@@ -15,10 +17,15 @@ class NavigationItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(isSelected ? selectedIcon : outlinedIcon, size: 35),
+        Icon(
+          isSelected ? selectedIcon : outlinedIcon,
+          color: isSelected ? AppColors.navBarColor : Colors.black87,
+          size: 30,
+        ),
         Text(
           iconName,
           style: TextStyle(
+            color: isSelected ? AppColors.navBarColor : Colors.black87,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
         ),

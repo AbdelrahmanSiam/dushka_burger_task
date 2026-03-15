@@ -17,7 +17,7 @@ class CartBadge extends StatelessWidget {
       ),
       child: Text(
         "0",
-        style: TextStyle(color: AppColors.navBarColor),
+        style: TextStyle(color: AppColors.navBarColor , fontWeight: FontWeight.bold),
       ),
     );
   }

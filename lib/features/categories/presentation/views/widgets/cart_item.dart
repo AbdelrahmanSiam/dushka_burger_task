@@ -8,7 +8,7 @@ class CartItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
-      offset: Offset(0, -MediaQuery.of(context).size.height * 0.035),
+      offset: Offset(0, -MediaQuery.of(context).size.height * 0.04),
       child: Container(
         width: 80,
         height: 80,

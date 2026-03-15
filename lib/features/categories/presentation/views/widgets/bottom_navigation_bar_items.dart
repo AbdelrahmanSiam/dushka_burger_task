@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_item.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/navigation_item.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class BottomNavigationBarItems extends StatelessWidget {
           isSelected: true,
         ),
         Spacer(),
-        Icon(Iconsax.shopping_cart_copy , size: 35,),
+        CartItem(),
         Spacer(),
         NavigationItem(
           outlinedIcon: Iconsax.percentage_circle_copy,
@@ -42,3 +43,5 @@ class BottomNavigationBarItems extends StatelessWidget {
     );
   }
 }
+
+

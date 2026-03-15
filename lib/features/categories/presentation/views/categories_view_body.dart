@@ -1,5 +1,5 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/category_list_view.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_view.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/category_tab_bar_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar_list_view.dart';
@@ -12,8 +12,9 @@ class CategoriesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 25,),
         SizedBox(
-          height: 50,
+          height: 55,
           child: CategoriesTabBarListView(
             categoryTabBarModel: CategoryTabBarModel(
               categoryTabBarName: "عروض دوشكا برجر",

@@ -3,13 +3,18 @@ import 'package:dusks_burger_task/features/categories/presentation/views/widgets
 import 'package:flutter/material.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({super.key});
-
+  const CustomBottomNavigationBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
+  final int currentIndex;
+  final Function(int) onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.08,
-      padding: EdgeInsets.symmetric(vertical: 8 , horizontal: 12),
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       decoration: BoxDecoration(
         color: AppColors.backgroundColor,
         boxShadow: [
@@ -20,7 +25,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ),
         ],
       ),
-      child: BottomNavigationBarItems(),
+      child: BottomNavigationBarItems(currentIndex: currentIndex, onTap: onTap),
     );
   }
 }

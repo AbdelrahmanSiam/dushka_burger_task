@@ -1,4 +1,5 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
+import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class AccountViewBody extends StatelessWidget {
@@ -7,9 +8,10 @@ class AccountViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Center(
-          child: Text("Account", style: AppStyles.textStyleBold18(context)),
+          child: Text(S.of(context).person, style: AppStyles.textStyleBold18(context)),
         ),
       ],
     );

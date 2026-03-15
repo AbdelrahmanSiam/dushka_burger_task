@@ -12,7 +12,7 @@ class AppRouter {
     routes: [
       GoRoute(path: languageView, builder: (_, __) => const LanguageView()),
       GoRoute(path: cartView, builder: (_, __) => const CartView()),
-      GoRoute(path: cartView, builder: (_, __) => const HomeView()),
+      GoRoute(path: homeView, builder: (_, __) => const HomeView()),
     ],
   );
 }

@@ -8,28 +8,36 @@ class NavigationItem extends StatelessWidget {
     required this.iconName,
     required this.selectedIcon,
     this.isSelected = false,
+    required this.onTap,
+    required this.onTapIndex,
   });
   final IconData outlinedIcon;
   final IconData selectedIcon;
   final String iconName;
   final bool isSelected;
+  final void Function(int) onTap;
+  final int onTapIndex;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(
-          isSelected ? selectedIcon : outlinedIcon,
-          color: isSelected ? AppColors.navBarColor : Colors.black87,
-          size: 30,
-        ),
-        Text(
-          iconName,
-          style: TextStyle(
+    return InkWell(
+      onTap: () => onTap(onTapIndex),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(
+            isSelected ? selectedIcon : outlinedIcon,
             color: isSelected ? AppColors.navBarColor : Colors.black87,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            size: 30,
           ),
-        ),
-      ],
+          Text(
+            iconName,
+            style: TextStyle(
+              color: isSelected ? AppColors.navBarColor : Colors.black87,
+              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

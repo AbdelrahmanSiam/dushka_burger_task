@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class CartWithoutAnimation extends StatelessWidget {
-  const CartWithoutAnimation({super.key});
+  const CartWithoutAnimation({super.key, required this.badgeNumber});
+  final int badgeNumber;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,7 +23,7 @@ class CartWithoutAnimation extends StatelessWidget {
             left: 10,
             top: 4,
             child: CartBadge(
-              badgeNumber: 0,
+              badgeNumber: badgeNumber,
             ),
           ),
         ],

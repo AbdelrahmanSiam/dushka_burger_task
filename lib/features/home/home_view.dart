@@ -1,7 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/features/account/account_view_body.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/categories_view_body.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/bottom_navigation_bar.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 import 'package:dusks_burger_task/features/home/home_view_body.dart';
 import 'package:dusks_burger_task/features/offer/offer_view_body.dart';
 import 'package:flutter/material.dart';

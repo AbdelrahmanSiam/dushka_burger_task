@@ -3,7 +3,8 @@ import 'package:dusks_burger_task/features/categories/presentation/views/widgets
 import 'package:flutter/material.dart';
 
 class CartWithAnimation extends StatefulWidget {
-  const CartWithAnimation({super.key});
+  const CartWithAnimation({super.key, required this.badgeNumber});
+  final int badgeNumber;
 
   @override
   State<CartWithAnimation> createState() => _CartWithAnimationState();
@@ -18,13 +19,26 @@ class _CartWithAnimationState extends State<CartWithAnimation>
     animationController = AnimationController(
       duration: Duration(milliseconds: 1500),
       vsync: this,
-    )..repeat(reverse: false);
+    );
     curvedAnimation = CurvedAnimation(
       parent: animationController,
       curve: Curves.easeOut,
     );
-
+    if (widget.badgeNumber > 0) {
+      animationController.repeat(reverse: false);
+    }
     super.initState();
+  }
+
+  @override
+  void didUpdateWidget(covariant CartWithAnimation oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.badgeNumber > 0 && !animationController.isAnimating) {
+      animationController.repeat();
+    }
+    if (widget.badgeNumber == 0 && animationController.isAnimating) {
+      animationController.stop();
+    }
   }
 
   @override
@@ -44,6 +58,9 @@ class _CartWithAnimationState extends State<CartWithAnimation>
           AnimatedBuilder(
             animation: curvedAnimation,
             builder: (context, child) {
+              if (widget.badgeNumber == 0) {
+                return const SizedBox();
+              }// If no orders no animation over card
               return Container(
                 width: 60 + (curvedAnimation.value * 50),
                 height: 60 + (curvedAnimation.value * 50),
@@ -56,7 +73,7 @@ class _CartWithAnimationState extends State<CartWithAnimation>
               );
             },
           ),
-          CartWithoutAnimation(),
+          CartWithoutAnimation(badgeNumber: widget.badgeNumber),
         ],
       ),
     );

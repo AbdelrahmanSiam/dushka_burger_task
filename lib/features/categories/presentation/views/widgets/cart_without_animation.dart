@@ -10,8 +10,8 @@ class CartWithoutAnimation extends StatelessWidget {
     return Transform.translate(
       offset: Offset(0, -MediaQuery.of(context).size.height * 0.04),
       child: Container(
-        width: 80,
-        height: 80,
+        width: 60,
+        height: 60,
         decoration: BoxDecoration(
           color: AppColors.navBarColor,
           shape: BoxShape.circle,
@@ -21,7 +21,7 @@ class CartWithoutAnimation extends StatelessWidget {
           children: [
             Icon(Iconsax.shopping_cart_copy, color: Colors.white, size: 35),
             Positioned(
-              left: 20,
+              left: 10,
               top: 4,
               child: CartBadge(
                 badgeNumber: 0,

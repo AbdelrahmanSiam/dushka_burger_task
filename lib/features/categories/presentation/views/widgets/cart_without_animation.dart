@@ -9,8 +9,8 @@ class CartWithoutAnimation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 60,
-      height: 60,
+      width: 65,
+      height: 65,
       decoration: BoxDecoration(
         color: AppColors.navBarColor,
         shape: BoxShape.circle,

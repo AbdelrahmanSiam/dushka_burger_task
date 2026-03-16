@@ -1,10 +1,10 @@
 import 'package:dusks_burger_task/core/utils/app_colors.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/badge.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-class CartItem extends StatelessWidget {
-  const CartItem({super.key});
+class CartWithoutAnimation extends StatelessWidget {
+  const CartWithoutAnimation({super.key});
   @override
   Widget build(BuildContext context) {
     return Transform.translate(
@@ -23,7 +23,9 @@ class CartItem extends StatelessWidget {
             Positioned(
               left: 20,
               top: 4,
-              child: CartBadge(),
+              child: CartBadge(
+                badgeNumber: 0,
+              ),
             ),
           ],
         ),

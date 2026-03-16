@@ -1,4 +1,4 @@
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_item.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_without_animation.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/navigation_item.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +36,7 @@ class BottomNavigationBarItems extends StatelessWidget {
         Spacer(),
         InkWell(
           onTap:()=> onTap(2),
-          child: CartItem(
+          child: CartWithoutAnimation(
           ),
         ),
         Spacer(),

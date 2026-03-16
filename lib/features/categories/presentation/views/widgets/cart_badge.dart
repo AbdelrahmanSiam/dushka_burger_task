@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class CartBadge extends StatelessWidget {
   const CartBadge({
-    super.key,
+    super.key, required this.badgeNumber,
   });
-
+ final int badgeNumber;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +16,7 @@ class CartBadge extends StatelessWidget {
         border: BoxBorder.all(color: AppColors.navBarColor),
       ),
       child: Text(
-        "0",
+        "$badgeNumber",
         style: TextStyle(color: AppColors.navBarColor , fontWeight: FontWeight.bold),
       ),
     );

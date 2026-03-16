@@ -7,28 +7,25 @@ class CartWithoutAnimation extends StatelessWidget {
   const CartWithoutAnimation({super.key});
   @override
   Widget build(BuildContext context) {
-    return Transform.translate(
-      offset: Offset(0, -MediaQuery.of(context).size.height * 0.04),
-      child: Container(
-        width: 60,
-        height: 60,
-        decoration: BoxDecoration(
-          color: AppColors.navBarColor,
-          shape: BoxShape.circle,
-        ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Icon(Iconsax.shopping_cart_copy, color: Colors.white, size: 35),
-            Positioned(
-              left: 10,
-              top: 4,
-              child: CartBadge(
-                badgeNumber: 0,
-              ),
+    return Container(
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        color: AppColors.navBarColor,
+        shape: BoxShape.circle,
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Icon(Iconsax.shopping_cart_copy, color: Colors.white, size: 35),
+          Positioned(
+            left: 10,
+            top: 4,
+            child: CartBadge(
+              badgeNumber: 0,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -3,8 +3,9 @@ import 'package:dusks_burger_task/features/categories/presentation/views/widgets
 import 'package:flutter/material.dart';
 
 class CartWithAnimation extends StatefulWidget {
-  const CartWithAnimation({super.key, required this.badgeNumber});
+  const CartWithAnimation({super.key, required this.badgeNumber, required this.onTap});
   final int badgeNumber;
+  final void Function(int) onTap ;
 
   @override
   State<CartWithAnimation> createState() => _CartWithAnimationState();
@@ -47,7 +48,7 @@ class _CartWithAnimationState extends State<CartWithAnimation>
               return CartRipple(curvedAnimation: curvedAnimation);
             },
           ),
-          CartWithoutAnimation(badgeNumber: widget.badgeNumber),
+          CartWithoutAnimation(badgeNumber: widget.badgeNumber , onTap:widget.onTap ,),
         ],
       ),
     );

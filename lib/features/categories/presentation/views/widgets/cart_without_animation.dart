@@ -1,34 +1,27 @@
 import 'package:dusks_burger_task/core/utils/app_colors.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_badge.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_with_badge.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class CartWithoutAnimation extends StatelessWidget {
-  const CartWithoutAnimation({super.key, required this.badgeNumber});
+  const CartWithoutAnimation({super.key, required this.badgeNumber,required this.onTap});
   final int badgeNumber;
+  final void Function(int) onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 65,
-      height: 65,
       decoration: BoxDecoration(
         color: AppColors.navBarColor,
         shape: BoxShape.circle,
       ),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Icon(Iconsax.shopping_cart_copy, color: Colors.white, size: 35),
-          Positioned(
-            left: 10,
-            top: 4,
-            child: CartBadge(
-              badgeNumber: badgeNumber,
-            ),
-          ),
-        ],
+      child: InkWell(
+        onTap: () => onTap(2),
+        child: CartWithBadge(
+          badgeNumber: badgeNumber,
+          iconColor: Colors.white,
+          containerColor: Colors.white,
+          numberColor: AppColors.navBarColor,
+        ),
       ),
     );
   }
 }
-

@@ -1,4 +1,4 @@
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_back_button.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsBody extends StatelessWidget {
@@ -9,12 +9,9 @@ class ProductDetailsBody extends StatelessWidget {
     return Column(
       children: [
         SizedBox(height: 25),
-        Row(
-          children: [
-            CustomBackButton(),
-          ],
-        ),
+        ProductDetailsHeader(),
       ],
     );
   }
 }
+

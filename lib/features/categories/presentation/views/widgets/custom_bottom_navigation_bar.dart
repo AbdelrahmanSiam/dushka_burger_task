@@ -39,10 +39,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
           ),
           Positioned(
             top: -(MediaQuery.of(context).size.height * 0.04),
-            child: InkWell(
-              onTap: () => onTap(2),
-              child: const CartWithAnimation(badgeNumber: 0,),
-            ),
+            child: CartWithAnimation(badgeNumber: 0,onTap: onTap,),
           ),
         ],
       ),

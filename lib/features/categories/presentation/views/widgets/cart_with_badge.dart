@@ -26,6 +26,7 @@ class CartWithBadge extends StatelessWidget {
               child: Icon(Iconsax.shopping_cart_copy, color: iconColor, size: 35),
             ),
             Positioned(
+              top: -2,
               left: 5,
               child: CartBadge(
                 badgeNumber: badgeNumber,

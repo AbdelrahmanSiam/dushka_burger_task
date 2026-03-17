@@ -1,4 +1,6 @@
+import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_image.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsBody extends StatelessWidget {
@@ -12,6 +14,8 @@ class ProductDetailsBody extends StatelessWidget {
         children: [
           SizedBox(height: 25),
           ProductDetailsHeader(),
+          SizedBox(height: 10),
+          ProductImage(productImage: AppAssets.burger,),
         ],
       ),
     );

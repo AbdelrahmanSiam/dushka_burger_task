@@ -1,5 +1,6 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_image.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListTile extends StatelessWidget {
@@ -7,14 +8,15 @@ class CategoryListTile extends StatelessWidget {
     super.key, required this.productModel,
   });
   final ProductModel productModel;
+  @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(18),
-        child: Image.asset(productModel.productImage, width: 55, height: 55, fit: BoxFit.cover),
+        child: ProductImage(productImage: productModel.productImage),
       ),
       title: Text(productModel.productName, style: AppStyles.textStyleSemiBold15(context)),
-      subtitle: Text(productModel.productPrice, style: AppStyles.textStyleBold18(context)),
+      subtitle: Text("${productModel.productPrice} ج.م", style: AppStyles.textStyleBold18(context)),
       trailing: Container(
         width: 30,
         height: 30,

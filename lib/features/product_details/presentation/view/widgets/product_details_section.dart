@@ -1,7 +1,5 @@
-import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/circle_button.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_image.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/quantity_selector.dart';
 import 'package:flutter/material.dart';

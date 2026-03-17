@@ -1,6 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_section.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,11 @@ class ProductDetailsBody extends StatelessWidget {
               productName: "صاروخ الوحوش",
             ),
           ),
+          CustomDivider(),
         ],
       ),
     );
   }
 }
+
+

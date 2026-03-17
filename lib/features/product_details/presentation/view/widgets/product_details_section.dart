@@ -3,6 +3,7 @@ import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/circle_button.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_image.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/quantity_selector.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsSection extends StatelessWidget {
@@ -27,10 +28,10 @@ class ProductDetailsSection extends StatelessWidget {
               style: AppStyles.textStyleBold18(context),
             ),
             Spacer(),
-            CircleButton(
-              icon: Icons.add,
-              backgroundColor: AppColors.primary,
-              iconColor: Colors.white,
+            QuantitySelector(
+              quantity: 1,
+              onIncrement: () {},
+              onDecrement: () {},
             ),
           ],
         ),

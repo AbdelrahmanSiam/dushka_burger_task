@@ -8,7 +8,7 @@ class AppRouter {
   static const String languageView = "/";
   static const String cartView = "/cart";
   static const String homeView = "/home";
-  static const String productDetailsView = "/product details";
+  static const String productDetailsView = "/productDetails";
   static final GoRouter router = GoRouter(
     initialLocation: languageView,
     routes: [

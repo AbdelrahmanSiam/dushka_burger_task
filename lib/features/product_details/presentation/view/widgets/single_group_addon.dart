@@ -17,7 +17,7 @@ class SingleGroupAddon extends StatelessWidget {
       children: [
         AddonHeader(addonHeaderName: addonHeaderName, isRequired: isRequired),
         SizedBox(height: 5,),
-        SingleAddon(),
+        SingleAddon(price: 0,),
       ],
     );
   }

@@ -10,7 +10,7 @@ class ProductDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       productDescription,
-      style: AppStyles.textStyleSemiBold15(context),
+      style: AppStyles.textStyleRegular18(context),
     );
   }
 }

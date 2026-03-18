@@ -16,6 +16,12 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
   );
   }
+  static TextStyle textStyleRegular18(BuildContext context){
+    return TextStyle(
+    fontSize: Responsive.getFont(context, 18),
+    fontWeight: FontWeight.normal,
+  );
+  }
   static TextStyle textStyleBold18(BuildContext context){
     return TextStyle(
     fontSize: Responsive.getFont(context, 18),

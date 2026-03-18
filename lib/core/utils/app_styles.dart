@@ -28,6 +28,12 @@ abstract class AppStyles {
     fontWeight: FontWeight.normal,
   );
   }
+  static TextStyle textStyleBold23(BuildContext context){
+    return TextStyle(
+    fontSize: Responsive.getFont(context, 23),
+    fontWeight: FontWeight.bold,
+  );
+  }
 }
 
 

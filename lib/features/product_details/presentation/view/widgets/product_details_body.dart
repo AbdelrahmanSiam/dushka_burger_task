@@ -5,6 +5,7 @@ import 'package:dusks_burger_task/features/product_details/presentation/view/wid
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_description.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_section.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_group_addon.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsBody extends StatelessWidget {
@@ -34,9 +35,11 @@ class ProductDetailsBody extends StatelessWidget {
                 "الووووووووووووووووووووووووووووووووووووووووووووووووووووووصف",
           ),
           CustomDivider(),
-          
+          SingleGroupAddon(addonHeaderName: "جبنه شيدر",isRequired: true,),
         ],
       ),
     );
   }
 }
+
+

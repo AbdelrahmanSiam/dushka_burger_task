@@ -1,4 +1,3 @@
-import 'package:dusks_burger_task/features/product_details/domain/entites/single_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';

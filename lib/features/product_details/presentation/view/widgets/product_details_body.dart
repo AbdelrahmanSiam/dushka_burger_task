@@ -39,6 +39,7 @@ class ProductDetailsBody extends StatelessWidget {
             ),
           ),
           AddonGroupsList(),
+          SliverToBoxAdapter(child: SizedBox(height: 20)),
         ],
       ),
     );

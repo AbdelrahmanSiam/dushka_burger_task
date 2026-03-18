@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 class AddToCartButton extends StatelessWidget {
   const AddToCartButton({
-    super.key,
+    super.key, required this.isAllRequiredDone,
   });
-
+ final bool isAllRequiredDone;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +16,7 @@ class AddToCartButton extends StatelessWidget {
         color: AppColors.backgroundColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.black38,
+            color: Colors.black26,
             blurRadius: 12,
             offset: Offset(0, -2),
           ),
@@ -27,8 +27,8 @@ class AddToCartButton extends StatelessWidget {
         padding: EdgeInsets.all(8),
         margin: EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: AppColors.primary,
-          borderRadius: BorderRadius.circular(12),
+          color:isAllRequiredDone? AppColors.primary : Colors.red.shade200,
+          borderRadius: BorderRadius.circular(12)
         ),
         child: Center(
           child: Text(

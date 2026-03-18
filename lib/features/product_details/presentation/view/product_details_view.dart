@@ -9,7 +9,7 @@ class ProductDetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ProductDetailsBody(),
-      bottomNavigationBar: AddToCartButton(),
+      bottomNavigationBar: AddToCartButton(isAllRequiredDone: false,),
     );
   }
 }

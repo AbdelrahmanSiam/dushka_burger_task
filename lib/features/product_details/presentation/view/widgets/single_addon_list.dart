@@ -11,7 +11,10 @@ class SingleAddonList extends StatelessWidget {
     return Column(
       children: addonsList.asMap().entries.map((e){
         int index = e.key;
-        return SingleAddon(singleAddonEntity: addonsList[index]);
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: SingleAddon(singleAddonEntity: addonsList[index]),
+        );
       }).toList(),
     );
   }

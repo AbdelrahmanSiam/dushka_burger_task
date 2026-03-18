@@ -23,11 +23,11 @@ class CartWithBadge extends StatelessWidget {
           clipBehavior: Clip.none,
           children: [
             Center(
-              child: Icon(Iconsax.shopping_cart_copy, color: iconColor, size: 35),
+              child: Icon(Iconsax.bag_copy, color: iconColor, size: 35),
             ),
             Positioned(
-              top: -2,
-              left: 5,
+              top: 5,
+              left: 10,
               child: CartBadge(
                 badgeNumber: badgeNumber,
                 containerColor: containerColor,

@@ -2,6 +2,7 @@ import 'package:dusks_burger_task/features/product_details/domain/entites/single
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon_list.dart';
 import 'package:flutter/material.dart';
 
 class SingleGroupAddon extends StatelessWidget {
@@ -16,13 +17,11 @@ class SingleGroupAddon extends StatelessWidget {
           isRequired: singleGroupAddonEntity.isRequired,
         ),
         SizedBox(height: 5),
-        SingleAddon(
-          price: singleGroupAddonEntity.price,
-          isSelected: singleGroupAddonEntity.isSelected,
-          addonName: singleGroupAddonEntity.addonName,
-        ),
+        SingleAddonList(singleGroupAddonEntity: singleGroupAddonEntity),
         CustomDivider(),
       ],
     );
   }
 }
+
+

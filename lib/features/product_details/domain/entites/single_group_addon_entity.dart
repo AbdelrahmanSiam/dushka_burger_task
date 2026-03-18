@@ -1,13 +1,13 @@
+import 'package:dusks_burger_task/features/product_details/domain/entites/single_addon_entity.dart';
+
 class SingleGroupAddonEntity {
-  final String addonHeaderName, addonName;
-  final bool isRequired, isSelected;
-  final double price;
+  final String addonHeaderName;
+  final bool isRequired;
+  final SingleAddonEntity singleAddonEntity;
 
   const SingleGroupAddonEntity({
     required this.addonHeaderName,
-    required this.addonName,
     required this.isRequired,
-    required this.isSelected,
-    required this.price,
+    required this.singleAddonEntity,
   });
 }

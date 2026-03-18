@@ -2,18 +2,38 @@ import 'package:dusks_burger_task/features/product_details/domain/entites/single
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
 import 'package:flutter/material.dart';
 
-class SingleAddonList extends StatelessWidget {
+class SingleAddonList extends StatefulWidget {
   const SingleAddonList({super.key, required this.addonsList});
 
- final List<SingleAddonEntity> addonsList ;
+  final List<SingleAddonEntity> addonsList;
+
+  @override
+  State<SingleAddonList> createState() => _SingleAddonListState();
+}
+
+class _SingleAddonListState extends State<SingleAddonList> {
+ int selected = -1;
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: addonsList.asMap().entries.map((e){
+      children: widget.addonsList.asMap().entries.map((e) {
         int index = e.key;
+        var item = e.value;
         return Padding(
           padding: const EdgeInsets.only(bottom: 10.0),
-          child: SingleAddon(singleAddonEntity: addonsList[index]),
+          child: InkWell(
+            onTap: () {
+              if (selected != index) {
+                setState(() {
+                  selected = index;
+                });
+              }
+            },
+            child: SingleAddon(
+              singleAddonEntity: item,
+              isSelected: selected == index,
+            ),
+          ),
         );
       }).toList(),
     );

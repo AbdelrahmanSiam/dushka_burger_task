@@ -4,14 +4,15 @@ import 'package:dusks_burger_task/features/product_details/presentation/view/wid
 import 'package:flutter/material.dart';
 
 class SingleAddon extends StatelessWidget {
-  const SingleAddon({super.key, required this.singleAddonEntity});
+  const SingleAddon({super.key, required this.singleAddonEntity, required this.isSelected});
   final SingleAddonEntity singleAddonEntity;
+  final bool isSelected;
   @override
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        ToggleCircle(isSelected: singleAddonEntity.isSelected),
+        ToggleCircle(isSelected: isSelected),
         SizedBox(width: 15),
         SingleAddonText(
           addonName: singleAddonEntity.addonName,

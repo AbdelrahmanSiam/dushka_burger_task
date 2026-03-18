@@ -12,7 +12,6 @@ class AddonGroupsList extends StatelessWidget {
       addonsList: [
         SingleAddonEntity(
           addonName: "جبنه شيدر",
-          isSelected: false,
           price: 13.15,
         ),
       ],
@@ -21,16 +20,16 @@ class AddonGroupsList extends StatelessWidget {
       addonHeaderName: "الرول الاول",
       isRequired: true,
       addonsList: [
-        SingleAddonEntity(addonName: "دوشكا رول", isSelected: false, price: 0),
-        SingleAddonEntity(addonName: "رانشى رول", isSelected: true, price: 0),
-        SingleAddonEntity(addonName: "فاير رول", isSelected: false, price: 0),
+        SingleAddonEntity(addonName: "دوشكا رول", price: 0),
+        SingleAddonEntity(addonName: "رانشى رول", price: 0),
+        SingleAddonEntity(addonName: "فاير رول", price: 0),
       ],
     ),
     SingleGroupAddonEntity(
       addonHeaderName: "البطاطس",
       isRequired: true,
       addonsList: [
-        SingleAddonEntity(addonName: "بطاطس وسط", isSelected: false, price: 0),
+        SingleAddonEntity(addonName: "بطاطس وسط",  price: 0),
       ],
     ),
   ];

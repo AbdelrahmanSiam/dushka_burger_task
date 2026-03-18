@@ -1,5 +1,6 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_header.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
 import 'package:flutter/material.dart';
 
 class SingleGroupAddon extends StatelessWidget {
@@ -15,6 +16,8 @@ class SingleGroupAddon extends StatelessWidget {
     return Column(
       children: [
         AddonHeader(addonHeaderName: addonHeaderName, isRequired: isRequired),
+        SizedBox(height: 5,),
+        SingleAddon(),
       ],
     );
   }

@@ -1,13 +1,14 @@
+import 'package:dusks_burger_task/features/product_details/domain/entites/single_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon_list.dart';
 import 'package:flutter/material.dart';
 
 class SingleGroupAddon extends StatelessWidget {
   const SingleGroupAddon({super.key, required this.singleGroupAddonEntity});
   final SingleGroupAddonEntity singleGroupAddonEntity;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,11 +18,11 @@ class SingleGroupAddon extends StatelessWidget {
           isRequired: singleGroupAddonEntity.isRequired,
         ),
         SizedBox(height: 5),
-        SingleAddonList(singleGroupAddonEntity: singleGroupAddonEntity),
+        SingleAddonList(
+          addonsList: singleGroupAddonEntity.addonsList,
+        ),
         CustomDivider(),
       ],
     );
   }
 }
-
-

@@ -9,35 +9,35 @@ class AddonGroupsList extends StatelessWidget {
     SingleGroupAddonEntity(
       addonHeaderName: "جبنه شيدر",
       isRequired: false,
-      singleAddonEntity: SingleAddonEntity(
-        addonName: "باكيت جبنه شيدر",
-        isSelected: false,
-        price: 13.15,
-      ),
+      addonsList: [
+        SingleAddonEntity(
+          addonName: "جبنه شيدر",
+          isSelected: false,
+          price: 13.15,
+        ),
+      ],
     ),
     SingleGroupAddonEntity(
       addonHeaderName: "الرول الاول",
       isRequired: true,
-      singleAddonEntity: SingleAddonEntity(
-        addonName: "دوشكا رول",
-        isSelected: true,
-        price: 0,
-      ),
+      addonsList: [
+        SingleAddonEntity(addonName: "دوشكا رول", isSelected: false, price: 0),
+        SingleAddonEntity(addonName: "رانشى رول", isSelected: true, price: 0),
+        SingleAddonEntity(addonName: "فاير رول", isSelected: false, price: 0),
+      ],
     ),
     SingleGroupAddonEntity(
       addonHeaderName: "البطاطس",
       isRequired: true,
-      singleAddonEntity: SingleAddonEntity(
-        addonName: "بطاطس وسط",
-        isSelected: false,
-        price: 0,
-      ),
+      addonsList: [
+        SingleAddonEntity(addonName: "بطاطس وسط", isSelected: false, price: 0),
+      ],
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
-      itemCount: 3,
+      itemCount: list.length,
       itemBuilder: (context, index) {
         return SingleGroupAddon(singleGroupAddonEntity: list[index]);
       },

@@ -1,21 +1,18 @@
-import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
+import 'package:dusks_burger_task/features/product_details/domain/entites/single_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
 import 'package:flutter/material.dart';
 
 class SingleAddonList extends StatelessWidget {
-  const SingleAddonList({super.key, required this.singleGroupAddonEntity});
+  const SingleAddonList({super.key, required this.addonsList});
 
-  final SingleGroupAddonEntity singleGroupAddonEntity;
-
+ final List<SingleAddonEntity> addonsList ;
   @override
   Widget build(BuildContext context) {
-    return SliverList.builder(
-      itemCount: 3,
-      itemBuilder: (context, index) {
-        return SingleAddon(
-          singleAddonEntity: singleGroupAddonEntity.singleAddonEntity,
-        );
-      },
+    return Column(
+      children: addonsList.asMap().entries.map((e){
+        int index = e.key;
+        return SingleAddon(singleAddonEntity: addonsList[index]);
+      }).toList(),
     );
   }
 }

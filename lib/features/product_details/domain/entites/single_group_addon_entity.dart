@@ -3,11 +3,11 @@ import 'package:dusks_burger_task/features/product_details/domain/entites/single
 class SingleGroupAddonEntity {
   final String addonHeaderName;
   final bool isRequired;
-  final SingleAddonEntity singleAddonEntity;
+  final List<SingleAddonEntity> addonsList;
 
   const SingleGroupAddonEntity({
     required this.addonHeaderName,
     required this.isRequired,
-    required this.singleAddonEntity,
+    required this.addonsList,
   });
 }

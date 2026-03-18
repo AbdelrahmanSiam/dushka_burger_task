@@ -13,6 +13,7 @@ class SingleGroupAddon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        CustomDivider(),
         AddonHeader(
           addonHeaderName: singleGroupAddonEntity.addonHeaderName,
           isRequired: singleGroupAddonEntity.isRequired,
@@ -21,7 +22,6 @@ class SingleGroupAddon extends StatelessWidget {
         SingleAddonList(
           addonsList: singleGroupAddonEntity.addonsList,
         ),
-        CustomDivider(),
       ],
     );
   }

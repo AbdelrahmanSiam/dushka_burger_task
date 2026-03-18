@@ -4,35 +4,51 @@ import 'package:dusks_burger_task/features/product_details/presentation/view/wid
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/quantity_selector.dart';
 import 'package:flutter/material.dart';
 
-class ProductDetailsSection extends StatelessWidget {
+class ProductDetailsSection extends StatefulWidget {
   const ProductDetailsSection({super.key, required this.productEntity});
   final ProductEntity productEntity;
+
+  @override
+  State<ProductDetailsSection> createState() => _ProductDetailsSectionState();
+}
+
+class _ProductDetailsSectionState extends State<ProductDetailsSection> {
+  int quantity = 1 ;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ProductImage(productImage: productEntity.productImage),
+        ProductImage(productImage: widget.productEntity.productImage),
         SizedBox(height: 30),
         Text(
-          productEntity.productName,
+          widget.productEntity.productName,
           style: AppStyles.textStyleRegular23(context),
         ),
         SizedBox(height: 15),
         Row(
           children: [
             Text(
-              "${productEntity.productPrice} ج.م",
+              "${widget.productEntity.productPrice} ج.م",
               style: AppStyles.textStyleBold18(context),
             ),
             Spacer(),
             QuantitySelector(
-              quantity: 1,
-              onIncrement: () {},
-              onDecrement: () {},
+              quantity: quantity,
+              onIncrement: () {
+                setState(() {
+                  quantity++;
+                });
+              },
+              onDecrement: () {
+                setState(() {
+                  quantity--;
+                });
+              },
             ),
           ],
         ),
+        SizedBox(height: 10,),
       ],
     );
   }

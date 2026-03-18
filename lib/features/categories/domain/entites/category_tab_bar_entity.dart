@@ -1,9 +1,9 @@
-class CategoryTabBarModel {
+class CategoryTabBarEntity {
   final String categoryTabBarName;
   final String categoryTabBarImage;
   final bool isSelected;
 
-  CategoryTabBarModel({
+  CategoryTabBarEntity({
     required this.categoryTabBarName,
     required this.categoryTabBarImage,
     required this.isSelected,

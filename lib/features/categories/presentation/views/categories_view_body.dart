@@ -1,7 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
+import 'package:dusks_burger_task/features/categories/domain/entites/category_tab_bar_entity.dart';
+import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_view.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/models/category_tab_bar_model.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/categories_tab_bar_list_view.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,7 @@ class CategoriesViewBody extends StatelessWidget {
         SizedBox(
           height: 55,
           child: CategoriesTabBarListView(
-            categoryTabBarModel: CategoryTabBarModel(
+            categoryTabBarEntity: CategoryTabBarEntity(
               categoryTabBarName: "عروض دوشكا برجر",
               categoryTabBarImage: AppAssets.logo,
               isSelected: true,
@@ -25,7 +25,7 @@ class CategoriesViewBody extends StatelessWidget {
         ),
         Expanded(
           child: CategoryListView(
-            productModel: ProductModel(
+            productEntity: ProductEntity(
               productHeader: "عروض دوشكا برجر",
               productImage: AppAssets.burger,
               productPrice: "20.4",

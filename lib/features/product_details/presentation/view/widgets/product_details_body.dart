@@ -1,6 +1,5 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
-import 'package:dusks_burger_task/core/utils/app_styles.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
+import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
 import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_description.dart';
@@ -23,8 +22,7 @@ class ProductDetailsBody extends StatelessWidget {
           ProductDetailsHeader(),
           SizedBox(height: 10),
           ProductDetailsSection(
-            productModel: ProductModel(
-              productHeader: "",
+            productEntity: ProductEntity(
               productImage: AppAssets.burger,
               productPrice: "150",
               productName: "صاروخ الوحوش",

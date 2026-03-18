@@ -3,7 +3,7 @@ class SingleGroupAddonEntity {
   final bool isRequired, isSelected;
   final double price;
 
-  SingleGroupAddonEntity({
+  const SingleGroupAddonEntity({
     required this.addonHeaderName,
     required this.addonName,
     required this.isRequired,

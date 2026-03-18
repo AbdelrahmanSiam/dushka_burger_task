@@ -1,25 +1,28 @@
-import 'package:dusks_burger_task/core/utils/app_styles.dart';
+import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_header.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/single_addon.dart';
 import 'package:flutter/material.dart';
 
 class SingleGroupAddon extends StatelessWidget {
-  const SingleGroupAddon({
-    super.key,
-    required this.addonHeaderName,
-    required this.isRequired,
-  });
-  final String addonHeaderName;
-  final bool isRequired;
+  const SingleGroupAddon({super.key, required this.singleGroupAddonEntity});
+  final SingleGroupAddonEntity singleGroupAddonEntity;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AddonHeader(addonHeaderName: addonHeaderName, isRequired: isRequired),
-        SizedBox(height: 5,),
-        SingleAddon(price: 0,),
+        AddonHeader(
+          addonHeaderName: singleGroupAddonEntity.addonHeaderName,
+          isRequired: singleGroupAddonEntity.isRequired,
+        ),
+        SizedBox(height: 5),
+        SingleAddon(
+          price: singleGroupAddonEntity.price,
+          isSelected: singleGroupAddonEntity.isSelected,
+          addonName: singleGroupAddonEntity.addonName,
+        ),
+        CustomDivider(),
       ],
     );
   }
 }
-

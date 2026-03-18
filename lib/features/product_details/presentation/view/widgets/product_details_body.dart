@@ -1,6 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/models/product_model.dart';
+import 'package:dusks_burger_task/features/product_details/domain/entites/single_group_addon_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_description.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
@@ -35,11 +36,17 @@ class ProductDetailsBody extends StatelessWidget {
                 "الووووووووووووووووووووووووووووووووووووووووووووووووووووووصف",
           ),
           CustomDivider(),
-          SingleGroupAddon(addonHeaderName: "جبنه شيدر",isRequired: true,),
+          SingleGroupAddon(
+            singleGroupAddonEntity: SingleGroupAddonEntity(
+              addonHeaderName: "جبنه شيدر",
+              addonName: "باكيت جبنه شيدر",
+              isRequired: false,
+              isSelected: false,
+              price: 13.15,
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
-

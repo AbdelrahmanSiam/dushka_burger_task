@@ -9,7 +9,7 @@ class SingleAddon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      ToggleCircle(),
+      ToggleCircle(isSelected: true,),
     ],);
   }
 }

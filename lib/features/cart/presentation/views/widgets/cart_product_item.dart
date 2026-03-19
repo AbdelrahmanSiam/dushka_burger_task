@@ -1,40 +1,49 @@
-import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
+import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_quantity_selector.dart';
 import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_image.dart';
 import 'package:flutter/material.dart';
 
-class CartProductItem extends StatelessWidget {
+class CartProductItem extends StatefulWidget {
   const CartProductItem({super.key, required this.productEntity});
- final ProductEntity productEntity;
+  final ProductEntity productEntity;
+
+  @override
+  State<CartProductItem> createState() => _CartProductItemState();
+}
+
+class _CartProductItemState extends State<CartProductItem> {
+  int quantity = 1;
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(18),
-        child: ProductImage(productImage: productEntity.productImage),
+        child: ProductImage(productImage: widget.productEntity.productImage),
       ),
       title: Text(
-        productEntity.productName,
+        widget.productEntity.productName,
         style: AppStyles.textStyleSemiBold15(context),
       ),
       subtitle: Text(
-        "${productEntity.productPrice} ج.م",
+        "${widget.productEntity.productPrice} ج.م",
         style: AppStyles.textStyleBold18(
           context,
         ).copyWith(color: Color(0XFFA3061B)),
       ),
-      trailing: Container(
-        width: 30,
-        height: 30,
-        decoration: BoxDecoration(
-          color: AppColors.primary,
-          shape: BoxShape.circle,
-        ),
-        child: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.add, color: Colors.white, size: 15),
-        ),
+      trailing: CartQuantitySelector(
+        quantity: quantity,
+        onIncrement: () {
+          setState(() {
+            quantity++;
+          });
+        },
+        onDecrement: () {
+          setState(() {
+            quantity--;
+          });
+        },
+        onDelete: () {},
       ),
     );
   }

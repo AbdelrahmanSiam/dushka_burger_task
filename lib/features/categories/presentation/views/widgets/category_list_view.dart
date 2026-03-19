@@ -1,7 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
-import 'package:dusks_burger_task/features/categories/presentation/views/widgets/category_list_tile.dart';
+import 'package:dusks_burger_task/features/categories/presentation/views/widgets/product_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

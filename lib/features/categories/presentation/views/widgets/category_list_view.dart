@@ -28,7 +28,7 @@ class CategoryListView extends StatelessWidget {
                 onTap: () {
                   GoRouter.of(context).push(AppRouter.productDetailsView);
                 },
-                child: CategoryListTile(productEntity: productEntity),
+                child: ProductListTile(productEntity: productEntity),
               );
             },
           ),

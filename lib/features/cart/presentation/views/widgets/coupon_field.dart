@@ -9,19 +9,25 @@ class CouponField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        suffixIcon: Icon(Iconsax.trash_copy),
-        suffixIconColor: AppColors.primary,
-        hintText: S.of(context).coupon_hint,
-        hintStyle: AppStyles.textStyleBold13(
-          context,
-        ).copyWith(color: Colors.black),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+    return Expanded(
+      child: TextField(
+        decoration: InputDecoration(
+          suffixIcon: Icon(Iconsax.trash_copy),
+          suffixIconColor: AppColors.primary,
+          labelText:S.of(context).coupon_hint,
+          labelStyle: AppStyles.textStyleBold13(
+            context,
+          ).copyWith(color: Colors.black),
+          focusedBorder:OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.black),
+          ),
+          border:OutlineInputBorder(
+            borderRadius: BorderRadius.circular(12),
+            borderSide: BorderSide(color: Colors.black),
+          ),
+          contentPadding: EdgeInsets.symmetric(vertical: 18 , horizontal: 12),
         ),
-        isDense: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 18 , horizontal: 12),
       ),
     );
   }

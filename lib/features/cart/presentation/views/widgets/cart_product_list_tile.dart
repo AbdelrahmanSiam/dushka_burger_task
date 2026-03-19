@@ -18,6 +18,7 @@ class _CartProductListTileState extends State<CartProductListTile> {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.all(0),
       leading: ClipRRect(
         borderRadius: BorderRadius.circular(18),
         child: ProductImage(productImage: widget.productEntity.productImage),

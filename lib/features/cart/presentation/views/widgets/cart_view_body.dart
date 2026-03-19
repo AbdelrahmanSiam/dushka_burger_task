@@ -1,3 +1,4 @@
+import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_view_header.dart';
 import 'package:flutter/material.dart';
 
 class CartViewBody extends StatelessWidget {
@@ -6,7 +7,11 @@ class CartViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [],
+      children: [
+        SizedBox(height: 25,),
+        CartViewHeader(),
+      ],
     );
   }
 }
+

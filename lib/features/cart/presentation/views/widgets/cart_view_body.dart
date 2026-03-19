@@ -3,6 +3,7 @@ import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_products_list.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_view_header.dart';
 import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
+import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class CartViewBody extends StatelessWidget {
@@ -18,6 +19,7 @@ class CartViewBody extends StatelessWidget {
         Expanded(
           child: CartProductsList(),
         ),
+        CustomDivider(),
       ],
     );
   }

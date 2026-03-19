@@ -248,6 +248,11 @@ class S {
   String get offer {
     return Intl.message('Offer', name: 'offer', desc: '', args: []);
   }
+
+  /// `Addons`
+  String get addons {
+    return Intl.message('Addons', name: 'addons', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -2,8 +2,8 @@ import 'package:dusks_burger_task/features/cart/presentation/views/widgets/addon
 import 'package:flutter/material.dart';
 
 class AddonsRow extends StatelessWidget {
-  const AddonsRow({super.key});
-  final List<String> addons = const ["بطاطس", "مشروب"];
+  const AddonsRow({super.key, required this.addons});
+  final List<String> addons ;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

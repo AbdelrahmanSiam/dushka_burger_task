@@ -22,15 +22,21 @@ class _CartProductListTileState extends State<CartProductListTile> {
         borderRadius: BorderRadius.circular(18),
         child: ProductImage(productImage: widget.productEntity.productImage),
       ),
-      title: Text(
-        widget.productEntity.productName,
-        style: AppStyles.textStyleSemiBold15(context),
-      ),
-      subtitle: Text(
-        "${widget.productEntity.productPrice} ج.م",
-        style: AppStyles.textStyleBold18(
-          context,
-        ).copyWith(color: Color(0XFFA3061B)),
+      title: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            widget.productEntity.productName,
+            style: AppStyles.textStyleSemiBold15(context),
+          ),
+          Text(
+            "${widget.productEntity.productPrice} ج.م",
+            style: AppStyles.textStyleBold18(
+              context,
+            ).copyWith(color: Color(0XFFA3061B)),
+          ),
+          SizedBox(height: 15,),
+        ],
       ),
       trailing: CartQuantitySelector(
         quantity: quantity,

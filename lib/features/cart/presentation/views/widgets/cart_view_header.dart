@@ -8,13 +8,16 @@ class CartViewHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        CustomBackButton(),
-        Spacer(flex: 1,),
-        Text(S.of(context).cart, style: AppStyles.textStyleBold18(context)),
-        Spacer(flex: 2,),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Row(
+        children: [
+          CustomBackButton(),
+          Spacer(flex: 1,),
+          Text(S.of(context).cart, style: AppStyles.textStyleBold18(context)),
+          Spacer(flex: 2,),
+        ],
+      ),
     );
   }
 }

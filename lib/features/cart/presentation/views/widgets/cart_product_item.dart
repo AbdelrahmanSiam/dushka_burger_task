@@ -1,5 +1,6 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/addon_chip.dart';
+import 'package:dusks_burger_task/features/cart/presentation/views/widgets/addons_row.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_product_list_tile.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_quantity_selector.dart';
 import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
@@ -23,10 +24,12 @@ class CartProductItem extends StatelessWidget {
               S.of(context).addons,
               style: AppStyles.textStyleBold18(context),
             ),
-            AddonChip(addonName: "بطاطس"),
+            AddonsRow(),
           ],
         ),
       ],
     );
   }
 }
+
+

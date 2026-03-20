@@ -1,7 +1,7 @@
 import 'package:dusks_burger_task/core/utils/app_assets.dart';
 import 'package:dusks_burger_task/features/categories/domain/entites/product_entity.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/addon_group_list.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
+import 'package:dusks_burger_task/core/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_description.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_header.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/product_details_section.dart';

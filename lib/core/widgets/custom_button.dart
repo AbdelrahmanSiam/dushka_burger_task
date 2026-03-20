@@ -1,13 +1,13 @@
 import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
-import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-class AddToCartButton extends StatelessWidget {
-  const AddToCartButton({
-    super.key, required this.isAllRequiredDone,
+class CustomButton extends StatelessWidget {
+  const CustomButton({
+    super.key,  this.isAllRequiredDone = true, required this.buttonText,
   });
  final bool isAllRequiredDone;
+ final String buttonText;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +32,7 @@ class AddToCartButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            S.of(context).add_to_cart,
+            buttonText,
             style: AppStyles.textStyleBold18(
               context,
             ).copyWith(color: Colors.white),

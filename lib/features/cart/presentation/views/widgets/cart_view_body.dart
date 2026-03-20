@@ -5,11 +5,9 @@ import 'package:dusks_burger_task/features/cart/domain/enities/cart_product_item
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/apply_button.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_products_list.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_view_header.dart';
-import 'package:dusks_burger_task/features/cart/presentation/views/widgets/coupon_field.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/coupon_section.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/payment_section.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
-import 'package:dusks_burger_task/generated/l10n.dart';
+import 'package:dusks_burger_task/core/widgets/custom_divider.dart';
 import 'package:flutter/material.dart';
 
 class CartViewBody extends StatelessWidget {
@@ -17,17 +15,19 @@ class CartViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(height: 35),
-        CartViewHeader(),
-        SizedBox(height: 10),
-        CartProductsListSection(),
-        CustomDivider(),
-        CouponSection(),
-        CustomDivider(),
-        PaymentSection(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: 35),
+          CartViewHeader(),
+          SizedBox(height: 10),
+          CartProductsListSection(),
+          CustomDivider(),
+          CouponSection(),
+          CustomDivider(),
+          PaymentSection(),
+        ],
+      ),
     );
   }
 }

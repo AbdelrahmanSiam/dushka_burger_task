@@ -2,7 +2,7 @@ import 'package:dusks_burger_task/core/utils/app_colors.dart';
 import 'package:dusks_burger_task/core/utils/app_router.dart';
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
 import 'package:dusks_burger_task/features/categories/presentation/views/widgets/cart_with_badge.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_back_button.dart';
+import 'package:dusks_burger_task/core/widgets/custom_back_button.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

@@ -1,5 +1,5 @@
 import 'package:dusks_burger_task/core/utils/app_styles.dart';
-import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_back_button.dart';
+import 'package:dusks_burger_task/core/widgets/custom_back_button.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
 

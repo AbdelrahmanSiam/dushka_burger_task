@@ -21,18 +21,23 @@ class DashedDivider extends StatelessWidget {
         final totalWidth = constraints.maxWidth;
         final dashCount = (totalWidth / (dashWidth + dashSpace)).floor();
 
-        return Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: List.generate(
-            dashCount,
-            (_) => SizedBox(
-              width: dashWidth,
-              height: thickness,
-              child: DecoratedBox(
-                decoration: BoxDecoration(color: color),
+        return Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(
+                dashCount,
+                (_) => SizedBox(
+                  width: dashWidth,
+                  height: thickness,
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(color: color),
+                  ),
+                ),
               ),
             ),
-          ),
+            SizedBox(height: 15,),
+          ],
         );
       },
     );

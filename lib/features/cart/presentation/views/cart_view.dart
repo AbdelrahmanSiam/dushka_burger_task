@@ -10,7 +10,7 @@ class CartView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CartViewBody(),
-      floatingActionButton: CustomButton(
+      bottomNavigationBar: CustomButton(
         buttonText: S.of(context).proceed_to_checkout,
       ),
     );

@@ -23,6 +23,14 @@ class CartProductsListSection extends StatelessWidget {
       ),
       addons: ["بطاطس", "مشروب", "بطاطس", "مشروب", "بطاطس", "مشروب"],
     ),
+    CartProductItemEntity(
+      productEntity: ProductEntity(
+        productImage: AppAssets.burger,
+        productPrice: "257.25",
+        productName: "صاروخ الوحوش",
+      ),
+      addons: ["بطاطس", "مشروب", "بطاطس", "مشروب", "بطاطس", "مشروب"],
+    ),
   ];
   @override
   Widget build(BuildContext context) {

@@ -21,6 +21,7 @@ class CartViewBody extends StatelessWidget {
           CouponSection(),
           CustomDivider(),
           PaymentSection(),
+          SizedBox(height: 15,),
         ],
       ),
     );

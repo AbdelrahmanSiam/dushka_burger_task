@@ -12,7 +12,7 @@ class SingleAddonList extends StatefulWidget {
 }
 
 class _SingleAddonListState extends State<SingleAddonList> {
- int selected = -1;
+  int selected = -1;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -23,11 +23,9 @@ class _SingleAddonListState extends State<SingleAddonList> {
           padding: const EdgeInsets.only(bottom: 10.0),
           child: InkWell(
             onTap: () {
-              if (selected != index) {
-                setState(() {
-                  selected = index;
-                });
-              }
+              setState(() {
+                selected = selected == index ? -1 : index; // toggle
+              });
             },
             child: SingleAddon(
               singleAddonEntity: item,

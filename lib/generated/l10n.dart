@@ -94,9 +94,14 @@ class S {
     return Intl.message('Remove', name: 'remove', desc: '', args: []);
   }
 
-  /// `Total`
-  String get total {
-    return Intl.message('Total', name: 'total', desc: '', args: []);
+  /// `Payment Details`
+  String get payment_details {
+    return Intl.message(
+      'Payment Details',
+      name: 'payment_details',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Subtotal`

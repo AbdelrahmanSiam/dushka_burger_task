@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "no_products": MessageLookupByLibrary.simpleMessage("لا توجد منتجات متاحة"),
     "offer": MessageLookupByLibrary.simpleMessage("العروض"),
     "optional": MessageLookupByLibrary.simpleMessage("اختياري"),
+    "payment_details": MessageLookupByLibrary.simpleMessage("تفاصيل الدفع"),
     "person": MessageLookupByLibrary.simpleMessage("الحساب"),
     "price": MessageLookupByLibrary.simpleMessage("السعر"),
     "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
@@ -59,6 +60,5 @@ class MessageLookup extends MessageLookupByLibrary {
     "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
     "subtotal": MessageLookupByLibrary.simpleMessage("السعر الإجمالي"),
     "tax": MessageLookupByLibrary.simpleMessage("الضريبة"),
-    "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
   };
 }

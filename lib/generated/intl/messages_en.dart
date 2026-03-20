@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "offer": MessageLookupByLibrary.simpleMessage("Offer"),
     "optional": MessageLookupByLibrary.simpleMessage("Optional"),
+    "payment_details": MessageLookupByLibrary.simpleMessage("Payment Details"),
     "person": MessageLookupByLibrary.simpleMessage("Account"),
     "price": MessageLookupByLibrary.simpleMessage("Price"),
     "proceed_to_checkout": MessageLookupByLibrary.simpleMessage(
@@ -59,6 +60,5 @@ class MessageLookup extends MessageLookupByLibrary {
     "retry": MessageLookupByLibrary.simpleMessage("Retry"),
     "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
     "tax": MessageLookupByLibrary.simpleMessage("Tax"),
-    "total": MessageLookupByLibrary.simpleMessage("Total"),
   };
 }

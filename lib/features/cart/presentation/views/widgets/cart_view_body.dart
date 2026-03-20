@@ -7,6 +7,7 @@ import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/cart_view_header.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/coupon_field.dart';
 import 'package:dusks_burger_task/features/cart/presentation/views/widgets/coupon_section.dart';
+import 'package:dusks_burger_task/features/cart/presentation/views/widgets/payment_section.dart';
 import 'package:dusks_burger_task/features/product_details/presentation/view/widgets/custom_divider.dart';
 import 'package:dusks_burger_task/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +26,13 @@ class CartViewBody extends StatelessWidget {
         CustomDivider(),
         CouponSection(),
         CustomDivider(),
+        PaymentSection(),
       ],
     );
   }
 }
+
+
 
 
 

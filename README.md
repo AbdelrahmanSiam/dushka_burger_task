@@ -9,7 +9,7 @@
 
 | Language Selection | Home / Categories | Product Details | Cart |
 |:-:|:-:|:-:|:-:|
-| ![Language](language.png) | ![Home](screenshots/categories.png) | ![Product](screenshots/product_details.png) | ![Cart](screenshots/cart.png) |
+| ![Language](language.png) | ![Home](categories.png) | ![Product](product_details.png) | ![Cart](cart.png) |
 
 ---
 

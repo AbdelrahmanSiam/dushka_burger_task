@@ -131,7 +131,7 @@ The app is built to consume the **Dushka Burger WordPress REST API**.
 ### ⚠️ Note on API Status
 
 The API credentials provided in the task expired before the submission deadline.  
-The app is **fully built and ready for live integration** — the architecture is clean and the data layer is completely separated from the UI.
+So I built the architecture is clean and responsive UI of the application.
 
 To connect the real API, simply update the datasource implementations in:
 ```
